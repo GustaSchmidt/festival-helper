@@ -1,0 +1,70 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+*{
+    --branco: #f7f6f6;
+    --preto: #111415;
+    --verde: #39b54a;
+    --rosa: #ff038c;
+    --laranja: #FF7D0D;            
+    --azul: #1B93DE;
+            
+    /* zero css */
+    margin: 0;
+    border: 0;
+    padding: 0;
+}
+body{
+    background: var(--preto);
+}
+#logo-evento{
+    width: 100%;
+    max-width: 250px;
+    margin: 0 auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+/* .container{
+            
+} */
+.prog-list{
+    margin: 0 auto;
+    width: max-content; 
+}
+.prog-list li{
+    list-style: none;
+    text-align: center;
+    width: 250px;
+    margin: 35px 0;
+    padding: 6px;
+    border: 1px solid var(--branco);
+    color: var(--branco);
+    font-family: 'Roboto', sans-serif;
+}
+.prog-list li .local{
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 1.6em;
+    padding: 2% 0 3% 0;
+}
+.prog-list li .nome-artitista{
+    text-transform: capitalize;
+    font-weight: 500;
+    font-size: 1.5em;
+    padding: 1% 0 2% 0;
+}
+.prog-list li .horario{
+    text-transform: capitalize;
+    font-weight: 300;
+    font-style: italic;
+    font-size: 1.1em;
+}
+.prog-list li#b1{
+    background-color: var(--rosa);
+}
+.prog-list li#b2{
+    background-color: var(--laranja);
+}
+.prog-list li#b3{
+    background-color: var(--azul);
+}

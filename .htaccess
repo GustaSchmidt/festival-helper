@@ -1,0 +1,13 @@
+# Ativação do RewriteEngine que nos permite gerenciar as rotas
+RewriteEngine On
+
+# Definição da rota principal
+RewriteBase /
+
+# Rewrite Rule, redirecionar todas as requests para o router.php
+
+# Libera acesso a pasta public_assets
+RewriteCond %{REQUEST_URI} !/public_assets/.*$ [NC]
+
+# Qualquer outra requisição não listata acima é enviada ao router.php
+RewriteRule ^(.*)$ app/router.php [QSA,L]
