@@ -15,7 +15,22 @@
 }
 body{
     background: var(--preto);
+    background-image: url("/public_assets/imagens/bg-1.png");
+    background-position: center 50vh;
+    background-size: 60vh;
+    background-repeat: no-repeat;
+    animation: background-home 3s;
+    /* animation-iteration-count: infinite; */
 }
+@keyframes background-home{
+    0% {
+        background-position: center 150vh;
+    }
+    100%{
+        background-position: center 50vh;
+    }
+}
+
 #logo-evento{
     width: 100%;
     max-width: 250px;
@@ -67,4 +82,21 @@ body{
 }
 .prog-list li#b3{
     background-color: var(--azul);
+}
+.dev-by {
+	bottom: 7px;
+	position: absolute;
+	width: 100%;
+	text-align: center;
+    font-family: 'Roboto', sans-serif;
+}
+.dev-by p{
+    font-weight: 400;
+    color: var(--branco);
+    text-align: center;
+}
+.dev-by a{
+    text-decoration: none;
+    color: var(--branco);
+    font-weight: 300;
 }
