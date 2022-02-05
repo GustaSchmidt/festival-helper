@@ -7,8 +7,12 @@ include_once("./router.class.php");
  * */ 
 
 //HOME ou INDEX
+Router::CreateRoute("GET", "/bloco", ["idPista"], function($args){
+    include("./View/pista.view.php");
+    return 0;
+});
 Router::CreateRoute("GET", "/", [], function(){
-    include("./View/home.view.html");
+    include("./View/home.view.php");
     return 0;
 });
 
