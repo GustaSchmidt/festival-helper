@@ -7,6 +7,7 @@
     <title>Programação Carnavibe</title>
 
     <link rel="stylesheet" href="/public_assets/css/master.css">
+    <link rel="stylesheet" href="/public_assets/css/home.css">
 
     
     </style>
