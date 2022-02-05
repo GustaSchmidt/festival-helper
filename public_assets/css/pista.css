@@ -1,0 +1,45 @@
+#TituloBloco{
+    text-align: center;
+    width: 100%;
+    color: var(--branco);
+    text-transform: uppercase;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bolder;
+}
+.pist-list{
+    margin: 0 auto;
+    margin-top: 2vh;
+    width: max-content;
+}
+.pist-list li{
+    list-style: none;
+    text-align: center;
+    width: 250px;
+    padding: 6px;
+    border: 1px solid var(--branco);
+    color: var(--branco);
+    font-family: 'Roboto', sans-serif;
+}
+.pist-list li.active{
+    background-color: var(--verde);
+}
+.container-list {
+	width: 300px;
+	margin: 0 auto;
+	height: max-content;
+	border-left: 3px var(--branco) solid;
+	padding: 0 35px;
+	display: table;
+	position: relative;
+}
+.container-list .time{
+	display: block;
+	position: absolute;
+	background: var(--rosa);
+    color: var(--branco);
+	width: 12px;
+	height: 12px;
+	text-align: center;
+	left: -4px;
+	border-radius: 50%;
+}
