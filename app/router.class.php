@@ -31,11 +31,11 @@ class Router{
 
         }
         
-        //TODO: tratar erros para rota inexistente;
         if(!is_null($rotaRequisitada)){
             $rotaRequisitada->start();
         }else{
             print("404 Não encontrado");
+            header("location: /");
         }
         
     }
