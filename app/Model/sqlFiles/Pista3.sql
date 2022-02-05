@@ -1,33 +1,34 @@
 /*
-* Pista 1
+* Pista 3
 */
 INSERT INTO `horarios` (`idHorario`, `Pista`, `Artista`, `Estilo`, `HorarioInicio`, `HorarioFim`) 
-VALUES (NULL, '1', 'Indicação', '?', '11:00', '12:59');
+VALUES (NULL, '3', 'Indicação', '?', '11:00', '12:59');
 
--- ZUFFO
+-- BERVON
 INSERT INTO `horarios` (`idHorario`, `Pista`, `Artista`, `Estilo`, `HorarioInicio`, `HorarioFim`) 
-VALUES (NULL, '1', 'Zuffo', 'EDM', '13:00', '14:59');
+VALUES (NULL, '3', 'BERVON', 'Industrial Techno', '13:00', '14:29');
 
--- Almanac
+-- BLANCAH
 INSERT INTO `horarios` (`idHorario`, `Pista`, `Artista`, `Estilo`, `HorarioInicio`, `HorarioFim`) 
-VALUES (NULL, '1', 'Almanac', 'EDM', '15:00', '16:29');
+VALUES (NULL, '3', 'BLANCAh', 'Techno', '14:30', '15:59');
 
--- Daft Hill
+-- L_CIO
 INSERT INTO `horarios` (`idHorario`, `Pista`, `Artista`, `Estilo`, `HorarioInicio`, `HorarioFim`) 
-VALUES (NULL, '1', 'Daft Hill', 'G-House', '16:30', '17:59');
+VALUES (NULL, '3', 'L_CIO', 'Techno', '16:00', '17:59');
 
--- Illusionize
+-- ELI IWASA
 INSERT INTO `horarios` (`idHorario`, `Pista`, `Artista`, `Estilo`, `HorarioInicio`, `HorarioFim`) 
-VALUES (NULL, '1', 'Illusionize', 'Brazilian Bass', '18:00', '19:59');
+VALUES (NULL, '3', 'Eli Iwasa', 'Tech House', '18:00', '19:29');
 
--- Chemical Surf
+-- WEHBBA
 INSERT INTO `horarios` (`idHorario`, `Pista`, `Artista`, `Estilo`, `HorarioInicio`, `HorarioFim`) 
-VALUES (NULL, '1', 'Chemical Surf', 'EDM', '20:00', '21:59');
+VALUES (NULL, '3', 'Wehbba', 'Techno', '19:30', '21:29');
 
--- Bruno BE
+-- MURPHY
 INSERT INTO `horarios` (`idHorario`, `Pista`, `Artista`, `Estilo`, `HorarioInicio`, `HorarioFim`) 
-VALUES (NULL, '1', 'Bruno BE', 'Deep House', '22:00', '23:29');
+VALUES (NULL, '3', 'Murphy', 'Techno', '21:30', '23:29');
 
--- Pimp CHIC
+-- RENATO RATIER
 INSERT INTO `horarios` (`idHorario`, `Pista`, `Artista`, `Estilo`, `HorarioInicio`, `HorarioFim`) 
-VALUES (NULL, '1', 'Pimp CHIC', 'Tech House', '23:30', '00:59');
+VALUES (NULL, '3', 'Tech House', '?', '23:30', '00:59');
+
