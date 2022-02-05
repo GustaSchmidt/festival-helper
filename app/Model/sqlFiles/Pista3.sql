@@ -30,5 +30,5 @@ VALUES ('22', '3', 'Murphy', 'Techno', '21:30', '23:29');
 
 -- RENATO RATIER
 INSERT INTO `horarios` (`idHorario`, `Pista`, `Artista`, `Estilo`, `HorarioInicio`, `HorarioFim`) 
-VALUES ('23', '3', 'Tech House', '?', '23:30', '00:59');
+VALUES ('23', '3', 'RENATO RATIER', 'Tech House', '23:30', '00:59');
 
