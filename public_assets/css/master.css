@@ -15,21 +15,9 @@
 }
 body{
     background: var(--preto);
-    background-image: url("/public_assets/imagens/bg-1.png");
-    background-position: center 50vh;
-    background-size: 60vh;
-    background-repeat: no-repeat;
-    animation: background-home 3s;
     /* animation-iteration-count: infinite; */
 }
-@keyframes background-home{
-    0% {
-        background-position: center 150vh;
-    }
-    100%{
-        background-position: center 50vh;
-    }
-}
+
 
 #logo-evento{
     width: 100%;
@@ -99,4 +87,37 @@ body{
     text-decoration: none;
     color: var(--branco);
     font-weight: 300;
+}
+
+/**
+* Mobile media query
+*/
+@media (max-width: 600px) { 
+    body{
+        background-image: url("/public_assets/imagens/bg-3.png");
+        background-position: center 50vh;
+        background-size: 60vh;
+        background-repeat: no-repeat;
+        animation: background-home 3s;  
+    }
+    @keyframes background-home{
+        0%{
+            background-position: center 150vh;
+        }
+        100%{
+            background-position: center 50vh;
+        }
+    }
+}
+
+/**
+* Desktop media query
+*/
+@media (min-width: 600px){
+    body{
+        background-image: url("/public_assets/imagens/bg-2.png"), url("/public_assets/imagens/bg-3.png");
+        background-position: 69vw 38vh, -13vw -6vh;
+        background-repeat: no-repeat, no-repeat;
+        background-size: 50vw, 40vw, auto;
+    }
 }
