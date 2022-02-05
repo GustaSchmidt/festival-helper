@@ -23,16 +23,16 @@ class HorarioDAO extends sqlBasic{
         $statement = sqlBasic::$conn->prepare("SELECT * FROM `horarios` WHERE `id`=:id LIMIT 1");
         $statement->bindParam(":id", $id);
         $statement->execute();
-        $loadedUser = $statement->fetchAll()[0];
+        $loadedTime = $statement->fetchAll()[0];
         $statement = null;
-        return $loadedUser;
+        return $loadedTime;
     }
 
-    public function insert(Horario $user = null){
+    public function insert(Horario $apresentacao = null){
         if(is_null($user)){
             throw new Exception("Inset deve reveber um array com as chaves correspondentes as colunas da tabela 'horarios'", 1);
         }
-        $statement = sqlBasic::$conn->prepare("INSERT INTO `horarios` (`idHorario`, `Pista`, `Artista`, `Estilo`, `HorarioInicio`, `HorarioFim`) 
+        $statement = sqlBasic::$conn->prepare("INSERT INTO `horarios` (`Pista`, `Artista`, `Estilo`, `HorarioInicio`, `HorarioFim`) 
                 VALUES (NULL, 
                 ':pista', 
                 ':artista',
@@ -41,11 +41,12 @@ class HorarioDAO extends sqlBasic{
                 ':fim'
             )");
         try {
-            $statement->bindParam(":nome", $user->nome);
-            $statement->bindParam(":apelido", $user->apelido);
-            $statement->bindParam(":email", $user->email);
-            $statement->bindParam(":senha", $user->senha);
-            $statement->bindParam(":celular", $user->celular);
+
+            $statement->bindParam(":pista", $apresentacao->Pista);
+            $statement->bindParam(":artista", $apresentacao->Artista);
+            $statement->bindParam(":estilo", $apresentacao->Estilo);
+            $statement->bindParam(":inicio", $apresentacao->HorarioInicio);
+            $statement->bindParam(":fim", $apresentacao->HorarioFim);
 
             return $statement->execute();
         }catch(\PDOException $e) {
