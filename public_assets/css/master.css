@@ -17,9 +17,14 @@ body{
     background: var(--preto);
     /* animation-iteration-count: infinite; */
 }
-/* .container{
-            
-} */
+#logo-evento{
+    width: 100%;
+    max-width: 250px;
+    margin: 0 auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
 .dev-by {
 	bottom: 7px;
 	position: absolute;
