@@ -18,21 +18,27 @@
         
 
         <ul class="prog-list">
-            <li id="b1" class="bloco" onclick="goPage(1)">
-                <h2 class="local">BLOCO 1</h2>
-                <h3 class="nome-artitista">Eli Iwasa</h3>
-                <span class="horario">proximo em 1h</span>
-            </li>
-            <li id="b2" class="bloco" onclick="goPage(2)">
-                <h2 class="local">BLOCO 2</h2>
-                <h3 class="nome-artitista">Daft Hill</h3>
-                <span class="horario">proximo em 10min</span>
-            </li>
-            <li id="b3" class="bloco" onclick="goPage(3)">
-                <h2 class="local">BLOCO 3</h2>
-                <h3 class="nome-artitista">Illusionize </h3>
-                <span class="horario">proximo em 3h</span>
-            </li>
+            <?php
+                for ($i=0; $i < count($_ARGS['Show']); $i++) { 
+                    $show = $_ARGS['Show'][$i];
+                    $now = date_create(date("H:i"));
+                    $end = date_create($show["HorarioFim"]);
+                    $diff = date_diff($now, $end);
+                
+                    if($diff->h == 0){
+                        $proxMsg = "proximo em ".$diff->i."min";
+                    }else{
+                        $proxMsg = "proximo em ".$diff->h."h".$diff->i."m";
+                    }
+                    
+                
+                    print('<li id="b'.$show['Pista'].'" class="bloco" onclick="goPage('.$show['Pista'].')">');
+                        print('<h2 class="local">BLOCO '.$show['Pista'].'</h2>');
+                        print('<h3 class="nome-artitista">'.$show['Artista'].'</h3>');
+                        print('<span class="horario">'.$proxMsg.'</span>');
+                    print('</li>');
+                }
+            ?>
         </ul>
 
         <!-- <div class="dev-by">

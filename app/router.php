@@ -21,7 +21,9 @@ Router::CreateRoute("GET", "/bloco", ["idPista"], function($_ARGS){
     return 0;
 });
 
-Router::CreateRoute("GET", "/", [], function(){
+Router::CreateRoute("GET", "/", [], function($_ARGS){
+    include("./Model/HorariosDAO.class.php");
+    include("./Controller/home.controller.php");
     include("./View/home.view.php");
     return 0;
 });
