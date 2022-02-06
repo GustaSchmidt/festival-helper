@@ -5,7 +5,8 @@ include_once("./router.class.php");
  * SERVER TIME
 */
 date_default_timezone_set(getenv('APP_TIMEZONE'));
-
+phpinfo();
+exit();
 /**
  * App Get Routes
  * */ 
