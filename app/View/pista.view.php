@@ -14,28 +14,53 @@
 </head>
 <body>
     <div class="container">
-        <img id="logo-evento" src="/public_assets/imagens/logo.png" alt="">
-        <h1 id="TituloBloco">Bloco 1</h1>     
-        
+        <img id="logo-evento" src="/public_assets/imagens/logo.png" alt="">     
+        <h1 id="TituloBloco">Bloco <?= $_ARGS['idPista']?></h1>   
+
         <ul class="pist-list">
-            <div class="container-list">
-                <span class="time"> * </span>
-                <li class="presentation">
-                    <h2>DJ NOME</h2>
-                    <p>Estilo</p>
-                </li>
-            </div>
-            <div class="container-list">
-                <li class="presentation active">
-                    <h2>DJ NOME</h2>
-                    <p>Estilo</p>
-                </li>
-            </div>
+            <?php
+            
+                $time = new DateTime(date("H:i:s"));
+
+                $i=0;
+                for ($i; $i < count($_ARGS['shows']); $i++) { 
+                    $show = $_ARGS['shows'][$i];
+                    $TimeInicio = new DateTime(date($show['HorarioInicio']));
+                    $TimeFim = new DateTime(date($show['HorarioFim']));
+                    
+                    /**
+                     * Array ( 
+                     * [idHorario] => 1 
+                     * [Pista] => 1 
+                     * [Artista] => Indicação 
+                     * [Estilo] => ? 
+                     * [HorarioInicio] => 11:00:00 
+                     * [HorarioFim] => 12:59:00 
+                     * ) 
+                    */
+                    if($time >= $TimeInicio and $time <= $TimeFim){
+                        print('<div class="container-list">');
+                            print('<span class="time"> * </span>');
+
+                            print('<li class="presentation active">');
+                                print('<h2>'.$show['Artista'].'</h2>');
+                                print('<p>'.$show['Estilo'].'</p>');
+                            print('</li>');
+                        print('</div>');
+                        
+                    }else{
+                        print('<div class="container-list">');
+                            print('<li class="presentation">');
+                                print('<h2>'.$show['Artista'].'</h2>');
+                                print('<p>'.$show['Estilo'].'</p>');
+                            print('</li>');
+                        print('</div>');
+                    }
+                }
+                unset($i);
+            ?>
         </ul>
-    
-        <!-- <div class="dev-by">
-            <p>Developer -> <a href="https://github.com/GustaSchmidt" target="_blank" rel="noopener noreferrer">Gustavo Schmidt</a> </p>
-        </div> -->
+        
     </div>
 </body>
 </html>

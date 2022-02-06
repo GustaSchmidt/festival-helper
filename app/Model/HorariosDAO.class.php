@@ -82,6 +82,7 @@ class HorarioDAO extends sqlBasic{
     }
 
     public function queryLinePlay(){
+        //DEBUG: resultados não são os esperados
         $statement = sqlBasic::$conn->prepare("SELECT * FROM `horarios` WHERE HorarioInicio <= '".date("H:i")."' ORDER BY HorarioInicio DESC LIMIT 3 ");
         
         $statement->execute();

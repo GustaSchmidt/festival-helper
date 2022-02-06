@@ -14,17 +14,17 @@
 .pist-list li{
     list-style: none;
     text-align: center;
-    width: 250px;
-    padding: 6px;
+    width: 200px;
+    padding: 10px 6px;
     border: 1px solid var(--branco);
     color: var(--branco);
     font-family: 'Roboto', sans-serif;
+    background-color: var(--preto);
 }
 .pist-list li.active{
     background-color: var(--verde);
 }
 .container-list {
-	width: 300px;
 	margin: 0 auto;
 	height: max-content;
 	border-left: 3px var(--branco) solid;
