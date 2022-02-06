@@ -10,7 +10,6 @@
     <link rel="stylesheet" href="/public_assets/css/home.css">
     <script src="/public_assets/js/liLink.js"></script>
     
-    </style>
 </head>
 <body>
     <div class="container">
