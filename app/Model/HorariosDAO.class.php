@@ -5,7 +5,7 @@ class Horario extends sqlBasic{
     private static $colums;
     
     function __construct(){
-        $statement = sqlBasic::$conn->prepare("DESCRIBE user");
+        $statement = sqlBasic::$conn->prepare("DESCRIBE horarios");
         $statement->execute();
         User::$colums = $statement->fetchAll();
        
