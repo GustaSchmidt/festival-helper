@@ -14,7 +14,9 @@
 </head>
 <body>
     <div class="container">
-        <img id="logo-evento" src="/public_assets/imagens/logo.png" alt="">     
+        <a href="/">
+            <img id="logo-evento" src="/public_assets/imagens/logo.png" alt="">    
+        </a> 
         <h1 id="TituloBloco">Bloco <?= $_ARGS['idPista']?></h1>   
 
         <ul class="pist-list">

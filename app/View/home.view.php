@@ -8,26 +8,27 @@
 
     <link rel="stylesheet" href="/public_assets/css/master.css">
     <link rel="stylesheet" href="/public_assets/css/home.css">
-
+    <script src="/public_assets/js/liLink.js"></script>
     
     </style>
 </head>
 <body>
     <div class="container">
-        <img id="logo-evento" src="/public_assets/imagens/logo.png" alt="">
+        <img id="logo-evento" src="/public_assets/imagens/logo.png" alt="">    
+        
 
         <ul class="prog-list">
-            <li id="b1" class="bloco">
+            <li id="b1" class="bloco" onclick="goPage(1)">
                 <h2 class="local">BLOCO 1</h2>
                 <h3 class="nome-artitista">Eli Iwasa</h3>
                 <span class="horario">proximo em 1h</span>
             </li>
-            <li id="b2" class="bloco">
+            <li id="b2" class="bloco" onclick="goPage(2)">
                 <h2 class="local">BLOCO 2</h2>
                 <h3 class="nome-artitista">Daft Hill</h3>
                 <span class="horario">proximo em 10min</span>
             </li>
-            <li id="b3" class="bloco">
+            <li id="b3" class="bloco" onclick="goPage(3)">
                 <h2 class="local">BLOCO 3</h2>
                 <h3 class="nome-artitista">Illusionize </h3>
                 <span class="horario">proximo em 3h</span>

@@ -12,6 +12,9 @@
     color: var(--branco);
     font-family: 'Roboto', sans-serif;
 }
+.prog-list li.bloco:hover{
+    cursor: pointer;
+}
 .prog-list li .local{
     font-weight: bold;
     text-transform: uppercase;
