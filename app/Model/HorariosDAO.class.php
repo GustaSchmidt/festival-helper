@@ -82,7 +82,7 @@ class HorarioDAO extends sqlBasic{
     }
 
     public function queryLinePlay(){
-        $statement = sqlBasic::$conn->prepare("SELECT * FROM `horarios` WHERE HorarioInicio <= ".date("H:i")." AND HorarioFim >= ".date("H:i"));
+        $statement = sqlBasic::$conn->prepare("SELECT * FROM `horarios` WHERE HorarioInicio <= CURRENT_TIME AND HorarioFim >= CURRENT_TIME");
         
         $statement->execute();
         $result = $statement->fetchAll();
