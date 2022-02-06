@@ -1,4 +1,5 @@
 <?php
+require_once(__DIR__."/Configs/SQLConfigs.class.php");
 
 class Horario extends sqlBasic{
     private static $colums;
@@ -53,9 +54,42 @@ class HorarioDAO extends sqlBasic{
             return $e;
         }
     }  
-    
-    
 
+    public function queryAll(){
+        $statement = sqlBasic::$conn->prepare("SELECT * FROM `horarios`");
+        $statement->execute();
+        $result = $statement->fetchAll();
+        $statement = null;
+
+        return $result;
+    }
+
+    public function queryByPista(int $pista = null){
+        if(is_null($pista)){
+            throw new Exception("Paremetro query não foi passado", 1);
+        }
+        $statement = sqlBasic::$conn->prepare("SELECT * FROM `horarios` WHERE Pista = :id");
+        try {
+            $statement->bindParam(":id", $pista);
+            $statement->execute();
+            $result = $statement->fetchAll();
+            $statement = null;
+            return $result;
+
+        }catch(\PDOException $e){
+            return $e;
+        }
+    }
+
+    public function queryLinePlay(){
+        $statement = sqlBasic::$conn->prepare("SELECT * FROM `horarios` WHERE HorarioInicio <= '".date("H:i")."' ORDER BY HorarioInicio DESC LIMIT 3 ");
+        
+        $statement->execute();
+        $result = $statement->fetchAll();
+        $statement = null;
+        
+        return $result;
+    }
+    
 }
-
 ?>
