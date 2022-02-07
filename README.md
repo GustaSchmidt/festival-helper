@@ -2,6 +2,8 @@
 
 Esse projeto foi desenvolvido para solucionar um problema comum em festivais de musica com diversos palcos, quem nunca se perguntou *"quem está tocando no palco X?"*, pensando nisso foi desenvolvido esse site, que mostra de forma simples essa informação e atualiza em tempo real a mesma, utilizando a as tecnologias.
 
+Teste o funcionamento em: https://fast-helper.herokuapp.com/
+
 ![enter image description here](https://img.shields.io/badge/PHP-777BB4?style=for-the-badge&logo=php&logoColor=white)![enter image description here](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)![enter image description here](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)![enter image description here](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)![enter image description here](https://img.shields.io/badge/MySQL-00000F?style=for-the-badge&logo=mysql&logoColor=white)
 
 # Screenshots
