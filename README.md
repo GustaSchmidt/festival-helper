@@ -5,7 +5,7 @@ Esse projeto foi desenvolvido para solucionar um problema comum em festivais de 
 ![enter image description here](https://img.shields.io/badge/PHP-777BB4?style=for-the-badge&logo=php&logoColor=white)![enter image description here](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)![enter image description here](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)![enter image description here](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)![enter image description here](https://img.shields.io/badge/MySQL-00000F?style=for-the-badge&logo=mysql&logoColor=white)
 
 # Screenshots
-![enter image description here](https://user-images.githubusercontent.com/53221408/152875431-c1e2541d-18ce-44be-95c2-1bc809034f91.png)![enter image description here](https://user-images.githubusercontent.com/53221408/152875426-2c05c55a-3e3d-4192-9393-8b6c065d558c.png)
+![enter image description here](https://user-images.githubusercontent.com/53221408/152875431-c1e2541d-18ce-44be-95c2-1bc809034f91.png)   ![enter image description here](https://user-images.githubusercontent.com/53221408/152875426-2c05c55a-3e3d-4192-9393-8b6c065d558c.png)
 
 
 # Deploy
