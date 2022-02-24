@@ -76,3 +76,6 @@ Rode as queryes do arquivo `DataBaseStruture.sql`
 
 - [ ] Calculadora da gastos
   - [ ] Adicionar produtos 
+
+- [ ] Banco de dados
+  - [ ] Criar Migrations
