@@ -60,11 +60,14 @@ Rode as queryes do arquivo `DataBaseStruture.sql`
 
 # A Fazer
 
- - [ ] Painel de administração
+- [ ] Painel de administração
 	 - [ ] Inclusão de Shows 
 	 - [ ] Mudança de tema
 	 - [ ] Analise de acessos
-- [ ] Front-end
-	- [ ] Atualizar horários sem requests
-	- [ ]  Time Line Atualizada conforme o show
 
+- [ ] Front-end
+	- [ ] Atualizar horários sem requests (Offline)
+	- [ ] Time Line Atualizada conforme o show
+
+- [ ] Calculadora da gastos
+  - [ ] Adicionar produtos 
