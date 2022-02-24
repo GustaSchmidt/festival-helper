@@ -47,10 +47,15 @@ O deploy pode ser feito diretamente em um SaaS como o heroku, recomendo utilizar
   
 </tbody>
 </table>
-No apache pode ser utilizar 
+No apache a configuração se da
 
     <VirtualHost *:80>
-	    SetEnv VARIAVEL_DE_AMBIENTE valor
+	    SetEnv DB_HOST valor
+	    SetEnv DB_USER valor
+	    SetEnv DB_PASS valor
+	    SetEnv DB_PORT valor
+	    SetEnv DB_SCHEMA valor
+	    SetEnv APP_TIMEZONE valor
     </VirtualHost>
 
 ## Banco de dados
