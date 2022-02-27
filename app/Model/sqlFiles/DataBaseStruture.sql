@@ -33,9 +33,10 @@ CREATE TABLE IF NOT EXISTS `festival_helper`.`Usuario` (
   `TelefoneConfirmed` TINYINT NOT NULL,
   `Site_idSite` INT NOT NULL,
   PRIMARY KEY (`idUsuario`, `Site_idSite`),
-  UNIQUE INDEX `idUsuario_UNIQUE` (`idUsuario` ASC) VISIBLE,
-  UNIQUE INDEX `Email_UNIQUE` (`Email` ASC) VISIBLE,
-  UNIQUE INDEX `Telefone_UNIQUE` (`Telefone` ASC) VISIBLE)
+  UNIQUE INDEX `idUsuario_UNIQUE` (`idUsuario` ASC),
+  UNIQUE INDEX `Email_UNIQUE` (`Email` ASC),
+  UNIQUE INDEX `Telefone_UNIQUE` (`Telefone` ASC)
+  )
 ENGINE = InnoDB;
 
 
@@ -49,7 +50,7 @@ CREATE TABLE IF NOT EXISTS `festival_helper`.`Site` (
   `BacgroundIMG` BLOB NOT NULL,
   `LogoIMG` BLOB NOT NULL,
   PRIMARY KEY (`idSite`),
-  UNIQUE INDEX `idSite_UNIQUE` (`idSite` ASC) VISIBLE)
+  UNIQUE INDEX `idSite_UNIQUE` (`idSite` ASC))
 ENGINE = InnoDB;
 
 
@@ -66,10 +67,10 @@ CREATE TABLE IF NOT EXISTS `festival_helper`.`Evento` (
   `DataFim` DATETIME NOT NULL,
   `Site_idSite` INT NOT NULL,
   PRIMARY KEY (`idEvento`, `Site_idSite`),
-  UNIQUE INDEX `Site_UNIQUE` (`Site` ASC) VISIBLE,
-  INDEX `fk_Evento_Usuario_idx` (`Usuario_idUsuario` ASC) VISIBLE,
-  UNIQUE INDEX `idEvento_UNIQUE` (`idEvento` ASC) VISIBLE,
-  INDEX `fk_Evento_Site1_idx` (`Site_idSite` ASC) VISIBLE,
+  UNIQUE INDEX `Site_UNIQUE` (`Site` ASC),
+  INDEX `fk_Evento_Usuario_idx` (`Usuario_idUsuario` ASC),
+  UNIQUE INDEX `idEvento_UNIQUE` (`idEvento` ASC),
+  INDEX `fk_Evento_Site1_idx` (`Site_idSite` ASC),
   CONSTRAINT `fk_Evento_Usuario`
     FOREIGN KEY (`Usuario_idUsuario`)
     REFERENCES `festival_helper`.`Usuario` (`idUsuario`)
@@ -94,8 +95,8 @@ CREATE TABLE IF NOT EXISTS `festival_helper`.`Palco` (
   `Nome` VARCHAR(45) NOT NULL,
   `Cor` VARCHAR(8) NOT NULL,
   PRIMARY KEY (`idPalco`),
-  INDEX `fk_Palco_Evento1_idx` (`Evento_idEvento` ASC) VISIBLE,
-  UNIQUE INDEX `idPalco_UNIQUE` (`idPalco` ASC) VISIBLE,
+  INDEX `fk_Palco_Evento1_idx` (`Evento_idEvento` ASC),
+  UNIQUE INDEX `idPalco_UNIQUE` (`idPalco` ASC),
   CONSTRAINT `fk_Palco_Evento1`
     FOREIGN KEY (`Evento_idEvento`)
     REFERENCES `festival_helper`.`Evento` (`idEvento`)
@@ -117,8 +118,8 @@ CREATE TABLE IF NOT EXISTS `festival_helper`.`Show` (
   `HorarioInicio` DATETIME NOT NULL,
   `HorarioFim` DATETIME NOT NULL,
   PRIMARY KEY (`idShow`),
-  INDEX `fk_Show_Palco1_idx` (`Palco_idPalco` ASC) VISIBLE,
-  UNIQUE INDEX `idShow_UNIQUE` (`idShow` ASC) VISIBLE,
+  INDEX `fk_Show_Palco1_idx` (`Palco_idPalco` ASC),
+  UNIQUE INDEX `idShow_UNIQUE` (`idShow` ASC),
   CONSTRAINT `fk_Show_Palco1`
     FOREIGN KEY (`Palco_idPalco`)
     REFERENCES `festival_helper`.`Palco` (`idPalco`)
