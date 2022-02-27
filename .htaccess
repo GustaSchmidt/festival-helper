@@ -4,8 +4,9 @@ RewriteEngine On
 # Definição da rota principal
 RewriteBase /
 
+######
 # Rewrite Rule, redirecionar todas as requests para o router.php
-
+########
 # Libera acesso a pasta public_assets
 RewriteCond %{REQUEST_URI} !/public_assets/.*$ [NC]
 
