@@ -1,5 +1,5 @@
 <?php
-include_once("./route.class.php");
+require(__DIR__."/route.class.php");
 class Router{
     private static $routes;
     

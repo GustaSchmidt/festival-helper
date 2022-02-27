@@ -1,5 +1,5 @@
 <?php
-include_once("./router.class.php");
+include_once(__DIR__."/../Framework/router.class.php");
 
 /**
  * SERVER TIME
