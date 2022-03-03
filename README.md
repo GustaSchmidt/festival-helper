@@ -1,4 +1,4 @@
-# Prog Carnavibe
+# Festival Helper
 
 Esse projeto foi desenvolvido para solucionar um problema comum em festivais de musica com diversos palcos, quem nunca se perguntou *"quem está tocando no palco X?"*, pensando nisso foi desenvolvido esse site, que mostra de forma simples essa informação e atualiza em tempo real a mesma, utilizando a as tecnologias.
 
