@@ -18,14 +18,14 @@ Router::CreateRoute("GET", "/bloco", ["idPista"], function($_ARGS){
         exit();
     }
     include("./View/pista.view.php");
-    return 0;
+    return 200;
 });
 
 Router::CreateRoute("GET", "/", [], function($_ARGS){
     include("./Model/HorariosDAO.class.php");
     include("./Controller/home.controller.php");
     include("./View/home.view.php");
-    return 0;
+    return 200;
 });
 
 Router::Run();
